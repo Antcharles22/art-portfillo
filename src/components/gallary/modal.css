@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    z-index: 1001; /* Ensure the modal content is above the overlay */
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.modal-description {
+    margin-top: 10px;
+    font-size: 1.2rem; /* Adjust font size as needed */
+    color: #000000;
+    z-index: 1002; /* Ensure the description is above the modal content */
+    background: white; /* Add background color to ensure visibility */
+    padding: 10px; /* Add padding for better readability */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 10px; /* Adjust padding for smaller screens */
+        max-width: 95%; /* Adjust max-width for smaller screens */
+        max-height: 95%; /* Adjust max-height for smaller screens */
+    }
+
+
+    .modal-close {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        top: 5px; /* Adjust position for smaller screens */
+        right: 5px; /* Adjust position for smaller screens */
+    }
+
+    .modal-description {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        padding: 5px; /* Adjust padding for smaller screens */
+        grid-column: span 2; /* Make description span both columns */
+    }
+
+    .modal-image {
+        grid-column: span 2; /* Make image span both columns */
+    }
+}
+
+/* Responsive styles for 450px width */
+@media (max-width: 450px) {
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-close {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        top: 5px; /* Adjust position for smaller screens */
+        right: 5px; /* Adjust position for smaller screens */
+    }
+
+    .modal-description {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        padding: 5px; /* Adjust padding for smaller screens */
+        grid-column: span 1; /* Make description span one column */
+    }
+
+    .modal-image {
+        grid-column: span 1; /* Make image span one column */
+    }
+}

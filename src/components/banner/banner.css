@@ -1,0 +1,94 @@
+
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    color: white;
+}
+
+.banner {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 7rem 7rem 4rem 7rem;
+    
+}
+
+.bannerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.bannerImage {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; ;
+    border-radius: 10px;
+    
+}
+
+.bannerImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 450px) {
+    .banner {
+        
+        margin: 4rem 0.5rem; /* Adjust margins for smaller screens */
+        padding: 5px; /* Adjust padding for smaller screens */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .bannerInfo {
+        margin-top: 5px; /* Adjust margin for smaller screens */
+        margin-bottom: 0.1rem;
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    .banner p {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+        padding: 0rem 0.5rem 0rem 0.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .bannerImage {
+        margin-top: 10px; /* Adjust margin for smaller screens */
+        margin-bottom: 10px; /* Adjust margin for smaller screens */
+        width: 100%; /* Ensure the image takes full width */
+        height: auto; /* Ensure the image maintains its aspect ratio */
+    }
+
+    .bannerImage img {
+        width: 100%;
+        height: auto; /* Ensure the image maintains its aspect ratio */
+        border-radius: 5px; /* Adjust border radius for smaller screens */
+    }
+}
+

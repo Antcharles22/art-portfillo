@@ -1,0 +1,157 @@
+* {
+    color: white;
+}
+.collections{
+    margin: 0rem 7rem 4rem 7rem;
+   
+}
+
+.collections__container {
+display: flex;
+justify-content: space-between;
+margin: 0rem 7rem 0rem 7rem;;
+flex-wrap: wrap;
+
+}
+
+h2 {
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6rem;
+   
+}
+    
+ 
+
+h3 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    
+}
+
+.slider {
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between buttons and image */
+    width: 50%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin-right: 2rem;
+}
+
+.slide {
+    flex: 1; /* Allow the image to take up remaining space */
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn1 {
+    flex: 0 0 auto; /* Prevent buttons from shrinking or growing */
+    background-color: rgb(134, 134, 134);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: auto;
+    padding: 13rem 1rem; /* Adjust padding for button size */
+}
+
+.btn2 {
+    flex: 0 0 auto; /* Prevent buttons from shrinking or growing */
+    background-color: rgb(134, 134, 134);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: auto;
+    padding: 13rem 1rem; /* Adjust padding for button size */
+    margin-right: 0;
+}
+
+button:hover {
+    background-color: rgb(32, 32, 32); /* Change background color on hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+button:first-of-type {
+    margin-right: 10px; /* Space between left button and image */
+}
+
+button:last-of-type {
+    margin-left: 10px; /* Space between right button and image */
+}
+
+.collections__item {
+    display: flex;
+    max-width: 40%;
+    flex-direction: column;
+    
+}
+.collections__item p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    margin: 1rem;
+    padding: 1rem;
+   
+  
+}
+
+@media (max-width: 450px) {
+
+    * {
+        overflow-x: hidden; /* Prevent horizontal scrolling */  
+    }
+
+    h2 {
+        font-size: 5rem; /* Adjust font size for smaller screens */
+    }
+
+    h3 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+        margin-bottom: 0;
+    }
+    
+    .collections {
+        margin: 0rem 0rem 4rem 0rem; /* Adjust margin for smaller screens */
+        max-width: 100%; /* Ensure the container takes full width */
+        margin: 0rem 0rem 0rem 0rem;
+    }
+
+    .collections__container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 0 1rem; /* Add padding for smaller screens */
+        margin: 0rem 0rem 0rem 0rem;
+    }
+
+    .collections__item {
+        margin-bottom: 1rem; /* Adjust margin for smaller screens */
+        max-width: 100%; /* Ensure the item takes full width */
+        margin: 0rem 0rem 0rem 0rem;
+    }
+
+    .slider img {
+        max-width: 100%; /* Ensure the image takes full width */
+    }
+    .slider {
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+
+    .btn1, .btn2 {
+        padding: .1rem 0.1rem; /* Adjust padding for smaller screens */
+        margin: 0; /* Remove margin */
+    }
+}

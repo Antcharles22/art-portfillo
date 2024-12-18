@@ -1,0 +1,182 @@
+.content {
+    position: fixed;
+    top: 0;
+    background-color: rgb(57, 56, 56);
+    padding: 0.1rem 3rem 0.1rem 3rem;
+    border-radius: 0px 0px 20px 20px;
+    z-index: 1000;
+}
+
+.content p {
+    color: white;
+    font-size: 1rem;
+    padding: 0.1rem;
+
+}
+
+
+.logo {
+    width: 110%;
+    margin-bottom: 20px; /* Space between logo and navbar */
+    z-index: 1; /* Ensure the logo is above the background image */
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh; /* Full viewport height */
+    flex-direction: column; /* Stack logo and navbar vertically */
+    background-image: url("../images/banner.jpg");
+    z-index: 0; /* Ensure the background image is behind the logo and navbar */
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+      
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.navbar {
+    display: flex;
+    background-color: hsl(0, 1%, 22%, 0.7);
+}
+
+.navbar ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 2rem;
+}
+
+.navbar ol li {
+    position: relative;
+    margin: 0 1rem;
+}
+
+.navbar ol li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.navbar ol li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: 0;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    z-index: 1;
+    text-decoration: none;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+
+.dropdown-content ul {
+    padding: 0; /* Ensure no padding */
+    margin: 0; /* Ensure no margin */
+}
+
+
+.dropdown-content li {
+    display: flex;
+    padding: 0; /* Ensure no padding */
+}
+
+.dropdown-content li a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 450px) {
+    .navbar {
+        flex-direction: row; /* Keep navbar items in a row */
+        align-items: center; /* Center align items */
+        padding: 0.1rem; /* Adjust padding for smaller screens */
+        justify-content: space-around; /* Distribute items evenly */
+        width: 100%; /* Ensure the navbar takes full width */
+        overflow-y: hidden; /* Hide overflow on smaller screens */
+    }
+
+    .navbar ol {
+        flex-direction: row; /* Keep list items in a row */
+        width: 100%; /* Ensure the list takes full width */
+        justify-content: space-around; /* Distribute list items evenly */
+        width: 100%; /* Ensure the navbar takes full width */
+    }
+
+    .navbar ol li {
+        width: auto; /* Allow list items to take their natural width */
+        text-align: center; /* Center align text */
+        margin: 0.5rem 0; /* Add margin between items */
+        
+    }
+
+    .navbar ol li a {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        font-size: 1.7rem; /* Adjust font size for smaller screens */
+        
+    }
+
+    .dropdown-content {
+        position: static; /* Make dropdown content flow with the document */
+        width: 100%; /* Ensure dropdown content takes full width */
+        box-shadow: none; /* Remove box shadow */
+       
+    }
+    .dropdown-content li {
+        justify-content: center; /* Center align dropdown items */
+        width: 100%; /* Ensure the navbar takes full width */
+    }
+
+    .dropdown-content li a {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        
+    }
+
+    button {
+        padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .content {
+        padding: 0.2rem;
+        background: 0.5s;
+    }
+
+    .content p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        margin-top: 0.3rem; /* Adjust margin for smaller screens */
+        margin-bottom: 0.3rem; /* Adjust margin for smaller screens */
+        
+    }
+}

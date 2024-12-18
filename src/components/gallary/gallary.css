@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    margin: 0rem 7rem 0rem 7rem;
+    max-height: 950px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    background-color: rgb(134, 134, 134);
+    padding: 1rem;
+}
+
+.div1 { grid-area: 1 / 1 / 6 / 3; }
+.div2 { grid-area: 1 / 3 / 4 / 5; }
+.div3 { grid-area: 4 / 3 / 7 / 5; }
+.div4 { grid-area: 3 / 5 / 7 / 7; }
+.div5 { grid-area: 1 / 5 / 3 / 7; }
+.gallbtn { grid-area: 6 / 1 / 7 / 3; }
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallary img:hover {
+    transform: scale(1.05);
+    transition: transform 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+
+.gallary {
+    margin: 0rem 7rem 0rem 7rem; /* Default margin for larger screens */
+}
+
+.gallbtn {
+    display: flex;
+    width: 100%; /* Ensure the parent container takes full width */
+}
+
+.mColl {
+    padding: 0; /* Remove padding from the button */
+    flex: 1; /* Allow the button to grow and fill the available space */
+    width: 100%; /* Ensure the button takes full width */
+    margin: 0.1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the button takes the full height of its container */
+    line-height: 1; /* Adjust line-height to control text spacing */
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .parent {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        margin: 0; /* Remove margin for smaller screens */
+        width: 100%; /* Ensure the parent container takes full width */
+        padding: 0 1rem; /* Add padding for smaller screens */
+        
+    }
+
+    .div1, .div2, .div3, .div4, .div5 {
+        flex: 1 1 100%; /* Allow each item to take full width */
+        overflow-y: hidden; /* Hide overflow for smaller screens */
+        margin-bottom: 1rem; /* Add space between items */
+    }
+
+    .gallary {
+        margin: 0; /* Remove margin for smaller screens */
+        width: 100%; /* Ensure the gallery takes full width */
+        padding: 0 1rem; /* Add padding for smaller screens */
+        gap: 0;
+    }
+
+    .gallary img:hover {
+        transform: none; /* Remove hover effect for smaller screens */
+        transition: none; /* Remove transition for smaller screens */
+        cursor: pointer;
+    }
+    
+
+    .mColl {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+        padding: 0.7rem; /* Adjust padding for smaller screens */
+        margin: 0.5rem 0 1rem 0; /* Add margin for better spacing */
+        
+    }
+}
